@@ -1,0 +1,227 @@
+/*
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 12px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(175, 103, 233),
+    hsl(240, 73%, 65%)
+  );
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  max-width: 100rem;
+  min-height: 55rem;
+  margin: 10rem auto 5rem;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 8px 30px 2px rgba(0, 0, 0, 0.6);
+}
+
+.card::after {
+  content: url(images/illustration-box-desktop.svg);
+
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-49%, -20%);
+}
+
+.img-container {
+  overflow: hidden;
+  position: relative;
+  background: url(images/bg-pattern-desktop.svg) no-repeat white;
+  /* background-size: 50rem 45rem; */
+  background-repeat: no-repeat;
+  background-position: 123% 65%;
+  padding: 5rem 0;
+  border-radius: 20px;
+}
+
+.img-woman {
+  /* transform: translateX(-17%); */
+  transform: translate(-17%, 15%);
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: hsl(240, 6%, 50%);
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.open h2 {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+}
+
+h2:hover,
+h2:active {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.item p {
+  font-size: 1.5rem;
+  color: hsl(240, 6%, 50%);
+}
+
+.arrow-icon {
+  margin-right: 1rem;
+}
+
+.item-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  /* transition: all 0.5s; */
+}
+
+.item {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding-bottom: 1rem;
+}
+
+.hidden-box {
+  display: none;
+}
+
+.open .hidden-box {
+  display: block;
+  opacity: 1;
+}
+
+.open .arrow-icon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 68em) {
+  .card {
+    margin: 10rem 5rem;
+  }
+}
+
+@media (max-width: 60em) {
+  .card {
+    grid-template-columns: 1fr;
+    max-width: 37rem;
+    min-width: 35rem;
+    margin: 12rem auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .item-container {
+    margin: 3rem auto;
+  }
+
+  .img-woman {
+    display: none;
+  }
+
+  .card::after {
+    content: url(images/illustration-woman-online-mobile.svg);
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-56%, -55%);
+  }
+
+  .card::before {
+    content: url(images/bg-pattern-mobile.svg);
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    z-index: 1;
+  }
+
+  .img-container {
+    background: none;
+  }
+}
