@@ -77,8 +77,6 @@ items.forEach(function (el) {
 });
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 ### Continued development
 
 I need to focus on CSS custom properties as it could help me in the future. I dont want to dive into SCSS as I am not 100% comfortable in CSS.
