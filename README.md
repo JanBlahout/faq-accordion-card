@@ -3,19 +3,6 @@
 You can see it live here:
 https://infallible-babbage-139566.netlify.app/
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author](#author)
-
-## Overview
-
 ### The challenge
 
 Users should be able to:
@@ -27,8 +14,6 @@ Users should be able to:
 ### Links
 
 - Live Site URL: https://infallible-babbage-139566.netlify.app/
-
-## My process
 
 ### Built with
 
